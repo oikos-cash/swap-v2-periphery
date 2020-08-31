@@ -1,24 +1,26 @@
 {
-  "name": "@uniswap/v2-periphery",
+  "name": "@oikos/swap-v2-periphery",
   "version": "1.1.0-beta.0",
-  "description": "🎚 Peripheral smart contracts for interacting with Uniswap V2",
+  "description": "🎚 Peripheral smart contracts for interacting with Swap V2",
   "engines": {
     "node": ">=10"
   },
-  "homepage": "https://uniswap.org",
+  "homepage": "https://swap.oikos.cash",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Uniswap/uniswap-v2-periphery"
+    "url": "https://github.com/oikos-cash/swap-v2-periphery"
   },
   "files": [
     "build",
     "contracts"
   ],
   "dependencies": {
+    "@oikos/swap-v2-core": "^1.0.1",
     "@uniswap/lib": "1.1.1",
-    "@uniswap/v2-core": "1.0.0"
+    "@uniswap/v2-core": "^1.0.1"
   },
   "devDependencies": {
+    "@opentron/java-tron-provider": "^0.2.4",
     "@types/chai": "^4.2.6",
     "@types/mocha": "^5.2.7",
     "chai": "^4.2.0",
@@ -29,20 +31,22 @@
     "prettier": "^1.19.1",
     "rimraf": "^3.0.0",
     "solc": "0.6.6",
+    "truffle": "^5.1.42",
     "ts-node": "^8.5.4",
     "typescript": "^3.7.3"
   },
   "scripts": {
-    "lint": "yarn prettier ./test/*.ts --check",
-    "lint:fix": "yarn prettier ./test/*.ts --write",
+    "lint": "prettier ./test/*.ts --check",
+    "lint:fix": "prettier ./test/*.ts --write",
     "clean": "rimraf ./build/",
     "copy-v1-artifacts": "ncp ./buildV1 ./build",
-    "precompile": "yarn clean",
+    "precompile": "npm run clean",
     "compile": "waffle .waffle.json",
-    "postcompile": "yarn copy-v1-artifacts",
-    "pretest": "yarn compile",
+    "postcompile": "npm run copy-v1-artifacts",
+    "pretest": "npm run compile",
     "test": "mocha",
-    "prepublishOnly": "yarn test"
+    "prepublishOnly": "npm test",
+    "deploy:nile": "truffle deploy --network nile --skip-dry-run"
   },
   "license": "GPL-3.0-or-later"
 }

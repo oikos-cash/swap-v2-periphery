@@ -25,7 +25,14 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
         WETH = _WETH;
     }
 
+    // class org.tron.core.services.http.JsonFormat$ParseException : 1:511: Enum type "protocol.SmartContract.ABI.Entry.EntryType" has no value named "Receive".
+    /*
     receive() external payable {
+        assert(msg.sender == WETH); // only accept ETH via fallback from the WETH contract
+    }
+    */
+    // MOD(tron): receive() not supported by TVM but fallback() is
+    fallback() external payable {
         assert(msg.sender == WETH); // only accept ETH via fallback from the WETH contract
     }
 
