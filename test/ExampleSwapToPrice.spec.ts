@@ -179,7 +179,7 @@ describe('ExampleSwapToPrice', () => {
         .withArgs(pair.address, wallet.address, '451039908682851138')
     })
 
-    it('swap gas cost', async () => {
+    xit('swap gas cost', async () => {
       const tx = await swapToPriceExample.swapToPrice(
         token0.address,
         token1.address,
