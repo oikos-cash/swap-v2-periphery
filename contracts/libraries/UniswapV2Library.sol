@@ -1,6 +1,7 @@
 pragma solidity >=0.5.0;
 
 import '@uniswap/v2-core/contracts/interfaces/IUniswapV2Pair.sol';
+import '@uniswap/v2-core/contracts/interfaces/IUniswapV2Factory.sol';
 
 import "./SafeMath.sol";
 
@@ -14,7 +15,22 @@ library UniswapV2Library {
         require(token0 != address(0), 'UniswapV2Library: ZERO_ADDRESS');
     }
 
+    // @TRON
+    // Tron does not have create2 opcode so we just check if the pair
+    // exists (if not, we create it) and return its address.
+    // @TODO(tron): ensure this does not break some code that needs the
+    // pair address before it is created :/
+    // @TODO(tron): idea: split pairFor in a view (pairFor) and non-view
+    // function which ensures the pair exists before returning its
+    // address?
+    function pairFor(address factory, address tokenA, address tokenB)
+    internal view returns (address pair) {
+      pair = IUniswapV2Factory(factory).getPair(tokenA, tokenB);
+      require(pair != address(0), "pairFor called on not yet created pair");
+      return pair;
+    }
     // calculates the CREATE2 address for a pair without making any external calls
+    /*
     function pairFor(address factory, address tokenA, address tokenB) internal pure returns (address pair) {
         (address token0, address token1) = sortTokens(tokenA, tokenB);
         pair = address(uint(keccak256(abi.encodePacked(
@@ -24,6 +40,7 @@ library UniswapV2Library {
                 hex'96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f' // init code hash
             ))));
     }
+    */
 
     // fetches and sorts the reserves for a pair
     function getReserves(address factory, address tokenA, address tokenB) internal view returns (uint reserveA, uint reserveB) {
