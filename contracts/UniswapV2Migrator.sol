@@ -17,9 +17,14 @@ contract UniswapV2Migrator is IUniswapV2Migrator {
         router = IUniswapV2Router01(_router);
     }
 
+    // @TRON:
+    // class org.tron.core.services.http.JsonFormat$ParseException : 1:511: Enum type "protocol.SmartContract.ABI.Entry.EntryType" has no value named "Receive".
     // needs to accept ETH from any v1 exchange and the router. ideally this could be enforced, as in the router,
     // but it's not possible because it requires a call to the v1 factory, which takes too much gas
-    receive() external payable {}
+    // receive() external payable {}
+
+    // MOD(tron): receive() not supported by TVM but fallback() is
+    fallback() external payable {}
 
     function migrate(address token, uint amountTokenMin, uint amountETHMin, address to, uint deadline)
         external

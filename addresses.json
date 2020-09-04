@@ -1,5 +1,9 @@
 {
   "nile": {
     "UniswapV2Router02": "0x8275b71F102B646360f77703CFD25564Fe6B770F"
+  },
+  "mainnet": {
+    "UniswapV2Router02": "0x7f9910B8a1aB0d6A1db9AAd117f11dB5F80987Ec",
+    "UniswapV2Migrator": "0xE2a0D44B863eF9361c38fD67A2D2db34E2516EC5"
   }
 }

@@ -11,10 +11,13 @@ The built contract artifacts can be browsed via [unpkg.com](https://unpkg.com/br
 
 ## Contract Addresses
 
-| Chain   | Address                                                                                                       |
-| ------- | ------------------------------------------------------------------------------------------------------------- |
-| Mainnet | [todo](https://tronscan.org/#/contract/todo)                                                                  |
-| Nile    | [TMs1rzzLCxEQDXVFKg6fU5vCJF5XgLjHfm](https://nile.tronscan.org/#/contract/TMs1rzzLCxEQDXVFKg6fU5vCJF5XgLjHfm) |
+| Chain   | Contract | Address                                                                                                       |
+| ------- | -------- | ------------------------------------------------------------------------------------------------------------- |
+| Mainnet | Router   | [TMbtBax52khEa4Rjy5NLEhmMkW6GULKSXX](https://tronscan.org/#/contract/TMbtBax52khEa4Rjy5NLEhmMkW6GULKSXX)      |
+| Mainnet | Migrator | [TWdWP2WKNYiXCypPMmg9DurFDjsobBAtaJ](https://tronscan.org/#/contract/TWdWP2WKNYiXCypPMmg9DurFDjsobBAtaJ)      |
+| Nile    | Router   | [TMs1rzzLCxEQDXVFKg6fU5vCJF5XgLjHfm](https://nile.tronscan.org/#/contract/TMs1rzzLCxEQDXVFKg6fU5vCJF5XgLjHfm) |
+
+Compiled with `solc 0.6.6+commit.6c089d02.Emscripten.clang`.
 
 # Local Development
 
