@@ -13,7 +13,7 @@ module.exports = async function(deployer, network) {
     WETHAddress = '0x8f44113A985076431b77f6078f0929f949cB8836'
     factoryV1Address = '0x64d5aF91C3A4aE5dB503dA8be25b5E47ad2D944e'
   } else {
-    factoryAddress = '0x98fED14512ec379eB5a545e1aE1DbDa17476439A'
+    factoryAddress = '0x3E59c50Fcfbb494328Cee937E8627e2A3Bd8FA83'
     WETHAddress = '0x891cdb91d149f23B1a45D9c5Ca78a88d0cB44C18'
     factoryV1Address = '0x0bdCBA8Ca6bAfcEc522F20eEF0CcE9BA603F3e43'
   }

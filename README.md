@@ -13,8 +13,8 @@ The built contract artifacts can be browsed via [unpkg.com](https://unpkg.com/br
 
 | Chain   | Contract | Address                                                                                                       |
 | ------- | -------- | ------------------------------------------------------------------------------------------------------------- |
-| Mainnet | Router   | [TMbtBax52khEa4Rjy5NLEhmMkW6GULKSXX](https://tronscan.org/#/contract/TMbtBax52khEa4Rjy5NLEhmMkW6GULKSXX)      |
-| Mainnet | Migrator | [TWdWP2WKNYiXCypPMmg9DurFDjsobBAtaJ](https://tronscan.org/#/contract/TWdWP2WKNYiXCypPMmg9DurFDjsobBAtaJ)      |
+| Mainnet | Router   | [TLtATujULuc9n7ZTeP5716ufASJvdfHyhU](https://tronscan.org/#/contract/TLtATujULuc9n7ZTeP5716ufASJvdfHyhU)      |
+| Mainnet | Migrator | [TS1YsFzUkLDjg4w7sDkwbrfXNySacnW7t4](https://tronscan.org/#/contract/TS1YsFzUkLDjg4w7sDkwbrfXNySacnW7t4)      |
 | Nile    | Router   | [TMs1rzzLCxEQDXVFKg6fU5vCJF5XgLjHfm](https://nile.tronscan.org/#/contract/TMs1rzzLCxEQDXVFKg6fU5vCJF5XgLjHfm) |
 
 Compiled with `solc 0.6.6+commit.6c089d02.Emscripten.clang`.
