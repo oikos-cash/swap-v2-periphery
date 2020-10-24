@@ -42,10 +42,10 @@
     "copy-v1-artifacts": "ncp ./buildV1 ./build",
     "precompile": "npm run clean",
     "compile": "waffle .waffle.json",
-    "postcompile": "npm run copy-v1-artifacts",
+    "postcompile-disabled": "npm run copy-v1-artifacts",
     "pretest": "npm run compile",
     "test": "mocha",
-    "prepublishOnly": "npm test",
+    "prepublishOnly-disabled": "npm test",
     "deploy:nile": "truffle deploy --network nile --skip-dry-run",
     "deploy": "truffle deploy --network mainnet --skip-dry-run"
   },
