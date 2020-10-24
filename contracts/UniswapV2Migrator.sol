@@ -48,7 +48,7 @@ contract UniswapV2Migrator is IUniswapV2Migrator {
             TransferHelper.safeTransfer(token, msg.sender, amountTokenV1 - amountTokenV2);
         } else if (amountETHV1 > amountETHV2) {
             // addLiquidityETH guarantees that all of amountETHV1 or amountTokenV1 will be used, hence this else is safe
-            TransferHelper.safeTransferETH(msg.sender, amountETHV1 - amountETHV2);
+            TransferHelper.safeTransferTRX(msg.sender, amountETHV1 - amountETHV2);
         }
     }
 }
