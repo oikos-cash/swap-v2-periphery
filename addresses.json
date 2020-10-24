@@ -3,7 +3,7 @@
     "UniswapV2Router02": "0x8275b71F102B646360f77703CFD25564Fe6B770F"
   },
   "mainnet": {
-    "UniswapV2Router02": "0x77b52F9CEF88D9b36C5C9E285D81Fe27D2cbafde",
-    "UniswapV2Migrator": "0xAfF36d67E8B721BCE417f8434Da6f749b75D74b5"
+    "UniswapV2Router02": "0xe0a0fB33C5EC2B342a34b00ea3B72B62107bDeB8",
+    "UniswapV2Migrator": "0x22250b1B43041CDF265718B0f7c18A1cb8b8693F"
   }
 }
