@@ -45,6 +45,7 @@
     "postcompile-disabled": "npm run copy-v1-artifacts",
     "pretest": "npm run compile",
     "test": "mocha",
+    "prepublishOnly": "npm compile",
     "prepublishOnly-disabled": "npm test",
     "deploy:nile": "truffle deploy --network nile --skip-dry-run",
     "deploy": "truffle deploy --network mainnet --skip-dry-run"
